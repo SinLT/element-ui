@@ -1,31 +1,7 @@
 {
-  "_from": "element-ui@^2.6.1",
-  "_id": "element-ui@2.14.0",
-  "_inBundle": false,
-  "_integrity": "sha1-3P8nGPtIVULqW1ofXA2vERNHeyQ=",
-  "_location": "/element-ui",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "range",
-    "registry": true,
-    "raw": "element-ui@^2.6.1",
-    "name": "element-ui",
-    "escapedName": "element-ui",
-    "rawSpec": "^2.6.1",
-    "saveSpec": null,
-    "fetchSpec": "^2.6.1"
-  },
-  "_requiredBy": [
-    "#DEV:/"
-  ],
-  "_resolved": "https://registry.npm.taobao.org/element-ui/download/element-ui-2.14.0.tgz?cache=0&sync_timestamp=1603958155882&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Felement-ui%2Fdownload%2Felement-ui-2.14.0.tgz",
-  "_shasum": "dcff2718fb485542ea5b5a1f5c0daf1113477b24",
-  "_spec": "element-ui@^2.6.1",
-  "_where": "D:\\puxing\\nwb",
   "bugs": {
     "url": "https://github.com/ElemeFE/element/issues"
   },
-  "bundleDependencies": false,
   "dependencies": {
     "async-validator": "~1.8.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.0",
@@ -139,13 +115,13 @@
   ],
   "license": "MIT",
   "main": "lib/element-ui.common.js",
-  "name": "element-ui",
+  "name": "@sinlt/element-ui",
   "peerDependencies": {
     "vue": "^2.5.17"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/ElemeFE/element.git"
+    "url": "git+https://github.com/SinLT/element-ui.git"
   },
   "scripts": {
     "bootstrap": "yarn || npm i",
@@ -154,7 +130,7 @@
     "build:umd": "node build/bin/build-locale.js",
     "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js",
     "clean": "rimraf lib && rimraf packages/*/lib && rimraf test/**/coverage",
-    "deploy:build": "npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo element.eleme.io>>examples/element-ui/CNAME",
+    "deploy:build": "npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo element.eleme.io>>examples/@sinlt/element-ui/CNAME",
     "deploy:extension": "cross-env NODE_ENV=production webpack --config build/webpack.extension.js",
     "dev": "npm run bootstrap && npm run build:file && cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
     "dev:extension": "rimraf examples/extension/dist && cross-env NODE_ENV=development webpack --watch --config build/webpack.extension.js",
@@ -169,5 +145,9 @@
   "style": "lib/theme-chalk/index.css",
   "typings": "types/index.d.ts",
   "unpkg": "lib/index.js",
-  "version": "2.14.0"
+  "version": "2.14.1",
+  "directories": {
+    "lib": "lib"
+  },
+  "author": "sevenyq"
 }
